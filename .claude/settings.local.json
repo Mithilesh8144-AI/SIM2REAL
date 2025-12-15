@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(python edit_notebook.py:*)",
+      "Bash(python reorganize_notebook.py:*)",
+      "Bash(python -c:*)",
+      "Bash(git stash:*)",
+      "Bash(python analyze_structure.py:*)",
+      "Bash(python reorganize_with_markdown.py:*)",
+      "Bash(python -m py_compile:*)",
+      "Bash(git restore:*)",
+      "Bash(python show_notebook_structure.py:*)",
+      "Bash(find:*)",
+      "Bash(python:*)"
+    ]
+  }
+}
