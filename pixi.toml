@@ -3,7 +3,7 @@ name = "frequency-analysis"
 version = "0.1.0"
 description = "Frequency Analysis of Neural Networks"
 authors = ["Mithilesh R"]
-channels = ["conda-forge", "pytorch"]
+channels = ["conda-forge", "pytorch", "nvidia"]
 platforms = ["linux-64", "osx-64", "osx-arm64"]
 
 [dependencies]
@@ -24,7 +24,7 @@ notebook = "jupyter notebook FrequencyAnalysis.ipynb"
 lab = "jupyter lab"
 
 [feature.cuda.target.linux-64.dependencies]
-pytorch-cuda = "12.1.*"
+pytorch-cuda = ">=11.8"
 
 [environments]
 default = {features = ["cuda"], solve-group = "default"}
