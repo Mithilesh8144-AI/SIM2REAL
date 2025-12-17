@@ -20,13 +20,13 @@ huggingface_hub = "*"
 jupyter = "*"
 ipykernel = "*"
 
+[target.linux-64.dependencies]
+pytorch-cuda = {version = "11.8", channel = "pytorch"}
+
 [tasks]
 notebook = "jupyter notebook FrequencyAnalysis.ipynb"
 lab = "jupyter lab"
-
-[feature.cuda.target.linux-64.dependencies]
-pytorch-cuda = {version = "11.8.*", channel = "pytorch"}
+check-gpu = "python check_gpu.py"
 
 [environments]
-default = {features = ["cuda"], solve-group = "default"}
-cpu = {features = [], solve-group = "default"}
+default = {solve-group = "default"}
