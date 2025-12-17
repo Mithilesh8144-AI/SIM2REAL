@@ -15,7 +15,8 @@
       "Bash(python:*)",
       "mcp__serena__list_dir",
       "Bash(mkdir:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(chmod:*)"
     ]
   }
 }

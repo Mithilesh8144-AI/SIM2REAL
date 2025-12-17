@@ -1,4 +1,4 @@
-[project]
+[workspace]
 name = "frequency-analysis"
 version = "0.1.0"
 description = "Frequency Analysis of Neural Networks"

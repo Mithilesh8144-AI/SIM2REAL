@@ -47,6 +47,33 @@ SIM2REAL/
 └── pixi.toml                   # Dependencies
 ```
 
+## Quick Start
+
+### First Time Setup (University Systems)
+
+Run this one command to set everything up:
+
+```bash
+bash setup_cuda.sh
+```
+
+This script will:
+- ✓ Create temp directory in your home (where there's space)
+- ✓ Set TMPDIR permanently in .bashrc
+- ✓ Install pixi environment
+- ✓ Install PyTorch with CUDA support
+- ✓ Verify GPU is working
+
+### Subsequent Usage
+
+After first-time setup, just use:
+
+```bash
+pixi install          # Install/update environment
+pixi run check-gpu    # Verify GPU
+pixi run lab          # Start Jupyter Lab
+```
+
 ## Usage
 
 ### Training
