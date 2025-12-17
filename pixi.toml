@@ -23,8 +23,9 @@ ipykernel = "*"
 notebook = "jupyter notebook FrequencyAnalysis.ipynb"
 lab = "jupyter lab"
 
-[feature.cuda.dependencies]
+[feature.cuda.target.linux-64.dependencies]
 pytorch-cuda = "12.1.*"
 
 [environments]
-default = ["cuda"]
+default = {features = ["cuda"], solve-group = "default"}
+cpu = {features = [], solve-group = "default"}
