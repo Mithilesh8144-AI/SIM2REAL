@@ -16,7 +16,11 @@
       "mcp__serena__list_dir",
       "Bash(mkdir:*)",
       "Bash(tree:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "Bash(grep:*)",
+      "mcp__serena__think_about_collected_information"
     ]
   }
 }
