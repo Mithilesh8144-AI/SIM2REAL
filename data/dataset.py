@@ -34,13 +34,14 @@ class HFImageNetDataset(Dataset):
         return image, label
 
 
-def load_imagenet_validation(subset_size=5000, image_size=224):
+def load_imagenet_validation(subset_size=5000, image_size=224, batch_size=64):
     """
     Load ImageNet validation dataset from HuggingFace.
 
     Args:
         subset_size: Number of images to load (default: 5000)
         image_size: Image size for resizing (default: 224)
+        batch_size: Batch size for DataLoader (default: 64)
 
     Returns:
         dataset: HFImageNetDataset instance
@@ -77,14 +78,14 @@ def load_imagenet_validation(subset_size=5000, image_size=224):
     # Create dataloader
     dataloader = torch.utils.data.DataLoader(
         dataset,
-        batch_size=64,
+        batch_size=batch_size,
         shuffle=False,
         num_workers=2,
         pin_memory=True
     )
 
     print(f"✓ Dataset created: {len(dataset)} images")
-    print(f"✓ DataLoader created: batch_size=64, {len(dataloader)} batches")
+    print(f"✓ DataLoader created: batch_size={batch_size}, {len(dataloader)} batches")
 
     return dataset, dataloader
 

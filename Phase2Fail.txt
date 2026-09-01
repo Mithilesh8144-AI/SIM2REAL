@@ -1,0 +1,14 @@
+  The problem: The classifier (11.7M params) was so powerful it could memorize all 25k samples without      
+  needing the mask at all.                                                                                  
+                                                                                                            
+  Training flow:                                                                                            
+  Image → FFT → Mask → IFFT → Classifier → Prediction                                                       
+                  ↑              ↑                                                                          
+              50k params    11.7M params (can memorize everything)                                          
+                                                                                                            
+  What the model learned:                                                                                   
+  - Classifier: "I'll just memorize each image's label directly"                                            
+  - Mask: "I'm not needed... gradients are random noise... drifting toward zero..."                         
+                                                                                                            
+  Result: Mask values collapsed from ~1.0 to ~0.0 (mean = -0.0003)                                          
+                                                                      

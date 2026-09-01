@@ -25,6 +25,8 @@ install-torch-cpu = "pip install torch torchvision torchaudio"
 notebook = "jupyter notebook FrequencyAnalysis.ipynb"
 lab = "jupyter lab"
 check-gpu = "python check_gpu.py"
+download = "python /home/bab61wot/VIT/SIM2REAL/scripts/cache_imagenet_100k.py"
+
 
 [environments]
 default = {solve-group = "default"}

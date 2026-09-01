@@ -21,10 +21,7 @@
       "Bash(python3:*)",
       "Bash(grep:*)",
       "mcp__serena__think_about_collected_information",
-      "Bash(jupyter nbconvert:*)",
-      "Bash(du:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(jupyter nbconvert:*)"
     ]
   }
 }

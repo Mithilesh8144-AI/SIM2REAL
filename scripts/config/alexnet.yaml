@@ -1,0 +1,20 @@
+# Phase 2 Configuration: AlexNet
+# Joint training of frequency mask + classifier from scratch
+
+architecture: alexnet
+
+training:
+  epochs: 90
+  batch_size: 64
+  mask_lr: 0.01          # Higher LR for mask (fewer params)
+  classifier_lr: 0.001   # Standard LR for classifier
+  weight_decay: 0.0001
+  subset_size: 25000     # ImageNet validation subset
+  log_every: 20          # Log every N batches
+  lr_step: 30            # Reduce LR every N epochs
+  lr_gamma: 0.1          # LR reduction factor
+
+mask:
+  image_size: 224
+  init_value: 1.0
+  init_std: 0.1

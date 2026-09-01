@@ -1,0 +1,20 @@
+# Phase 2 Configuration: ResNet-18
+# Joint training of frequency mask + classifier from scratch
+
+architecture: resnet18
+
+training:
+  epochs: 90
+  batch_size: 64
+  mask_lr: 0.01
+  classifier_lr: 0.001
+  weight_decay: 0.0001
+  subset_size: 25000
+  log_every: 20
+  lr_step: 30
+  lr_gamma: 0.1
+
+mask:
+  image_size: 224
+  init_value: 1.0
+  init_std: 0.1
